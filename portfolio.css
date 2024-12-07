@@ -1,0 +1,344 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    animation: slide-in 1s ease-out;
+}
+
+/* Effet de fade-in pour les containers */
+.container {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Toggle animations */
+.hidden {
+    display: none;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #0073e6;
+    cursor: pointer;
+    position: relative;
+}
+
+h2 .toggle {
+    font-size: 1rem;
+    color: #555;
+    margin-left: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* Keyframes */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles généraux pour la section Formation */
+#education {
+    margin: 2rem 0;
+}
+
+#education h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0073e6;
+    margin-bottom: 1rem;
+}
+
+/* Conteneur pour les cartes de formation */
+.education-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* Carte de formation */
+.education-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Icône de diplôme */
+.education-icon {
+    font-size: 3rem;
+    color: #0073e6;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Détails du diplôme */
+.education-details {
+    text-align: center;
+}
+
+.education-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.education-details p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Effet d'animation au survol */
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour la section Compétences */
+#skills {
+    margin: 2rem 0;
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0073e6;
+    margin-bottom: 1rem;
+}
+
+/* Liste des compétences avec logos */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* Animation de masquage/affichage des compétences */
+.content.hidden {
+    display: none;
+}
+
+/* Effet d'animation au survol de chaque compétence */
+.skills-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style général de la section Contact */
+#contact {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre de la section */
+#contact h2 {
+    font-size: 2rem;
+    color: #0073e6;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Informations de contact */
+.contact-info {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.contact-info a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Formulaire de contact */
+.contact-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+    font-size: 1.5rem;
+    color: #0073e6;
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.submit-btn {
+    background-color: #0073e6;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Style pour une barre de navigation sticky */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #0073e6;
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet de survol pour les éléments de navigation */
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Style pour la section Projets */
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-link {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Exemple de parallax simple */
+.parallax {
+    background-image: url('background-image.jpg');
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Style pour le splash screen */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(128, 10, 10, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    z-index: 1000;
+}
+
+/* Animation de fondu */
+#splash-screen h1 {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Cacher le splash screen après 3 secondes */
+#splash-screen.hidden {
+    display: none;
+}
